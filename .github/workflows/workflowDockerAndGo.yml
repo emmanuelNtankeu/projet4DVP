@@ -1,0 +1,22 @@
+name: Dependabot
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Dependabot
+        uses: dependabot/dependabot-core@stable
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: "/"
+          update: "all"
+          ignore:
+            - dependency-name: "github.com/dependabot"
+              directory: "/"
+          package-ecosystem: "gomod", "docker"
+          registry-url: "https://proxy.golang.org"
