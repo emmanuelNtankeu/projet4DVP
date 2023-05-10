@@ -16,4 +16,6 @@ jobs:
           context: ./super_calculator
           file: ./super_calculator/Dockerfile
           push: true
-          tags: LeNDE/projet4dvp
+          tags: emmanuelntankeu/projet4dvp
+          
+          
