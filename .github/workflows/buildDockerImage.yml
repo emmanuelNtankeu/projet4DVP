@@ -12,3 +12,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Build Docker image
         run: docker build -t 4dvp_calculator
+        working-directory: ../Dockerfile
