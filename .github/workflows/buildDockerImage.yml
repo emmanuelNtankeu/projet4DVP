@@ -11,5 +11,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build Docker image
-        run: docker build -t 4dvp_calculator
+        run: docker build -t 4dvp_calculator .
         working-directory: ../Dockerfile
